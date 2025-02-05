@@ -7,6 +7,7 @@ public class PracticeProblemTest {
    @Test
    public void testQ1_1()
    {
+      InputStream originalIn = System.in;
       String data = "Hello";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -22,12 +23,14 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ1_2()
    {
-      String data = "Bye";
+      
+      InputStream originalIn = System.in; = "Bye";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
       PrintStream originalOut = System.out;
@@ -42,11 +45,14 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
+      
    }
 
    @Test
    public void testQ2_1()
    {
+      InputStream originalIn = System.in;
       String data = "9\n5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -62,11 +68,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ2_2()
    {
+      InputStream originalIn = System.in;
       String data = "9\n3";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -82,11 +90,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ3_1()
    {
+      InputStream originalIn = System.in;
       String data = "Hello";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -102,11 +112,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ3_2()
    {
+      InputStream originalIn = System.in;
       String data = "Bye";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -122,9 +134,11 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }@Test
    public void testQ4_1()
    {
+      InputStream originalIn = System.in;
       String data = "5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -140,11 +154,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ4_2()
    {
+      InputStream originalIn = System.in;
       String data = "0";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -160,11 +176,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ5_1()
    {
+      InputStream originalIn = System.in;
       String data = "false";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -180,11 +198,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ5_2()
    {
+      InputStream originalIn = System.in;
       String data = "true";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -200,9 +220,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
-   }@Test
+      System.setIn(originalIn);
+   }
+   
+   @Test
    public void testQ6_1()
    {
+      InputStream originalIn = System.in;
       String data = "3.5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -218,11 +242,13 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 
    @Test
    public void testQ6_2()
    {
+      InputStream originalIn = System.in;
       String data = "9.0";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
@@ -238,5 +264,6 @@ public class PracticeProblemTest {
 
       // undo the binding in System
       System.setOut(originalOut);
+      System.setIn(originalIn);
    }
 }
