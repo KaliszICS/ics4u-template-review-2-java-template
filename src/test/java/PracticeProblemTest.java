@@ -63,7 +63,7 @@ public class PracticeProblemTest {
       PracticeProblem.q2();
 
       // assertion
-      assertEquals("In: In: 1\n", bos.toString());
+      assertEquals("In: In: 1\n4\n", bos.toString());
 
    }
 
@@ -79,7 +79,7 @@ public class PracticeProblemTest {
       PracticeProblem.q2();
 
       // assertion
-      assertEquals("In: 3\n", bos.toString());
+      assertEquals("In: 3\n0\n", bos.toString());
 
    }
 
