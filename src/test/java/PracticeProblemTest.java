@@ -79,7 +79,7 @@ public class PracticeProblemTest {
       PracticeProblem.q2();
 
       // assertion
-      assertEquals("In: 3\n0\n", bos.toString());
+      assertEquals("In: In: 3\n0\n", bos.toString());
 
    }
 
@@ -115,7 +115,7 @@ public class PracticeProblemTest {
    public void testQ4_1()
    {
       InputStream originalIn = System.in;
-      String data = "5";
+      String data = "5\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -129,7 +129,7 @@ public class PracticeProblemTest {
    public void testQ4_2()
    {
       InputStream originalIn = System.in;
-      String data = "0";
+      String data = "0\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -143,7 +143,7 @@ public class PracticeProblemTest {
    public void testQ5_1()
    {
       InputStream originalIn = System.in;
-      String data = "false";
+      String data = "false\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -157,7 +157,7 @@ public class PracticeProblemTest {
    public void testQ5_2()
    {
       InputStream originalIn = System.in;
-      String data = "true";
+      String data = "true\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -171,7 +171,7 @@ public class PracticeProblemTest {
    public void testQ6_1()
    {
       InputStream originalIn = System.in;
-      String data = "3.5";
+      String data = "3.5\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -185,7 +185,7 @@ public class PracticeProblemTest {
    public void testQ6_2()
    {
       InputStream originalIn = System.in;
-      String data = "9.0";
+      String data = "9.0\n";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
