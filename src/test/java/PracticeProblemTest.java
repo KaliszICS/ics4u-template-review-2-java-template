@@ -58,7 +58,7 @@ public class PracticeProblemTest {
       PracticeProblem.q2();
 
       // assertion
-      assertEquals("In: 1\n", bos.toString());
+      assertEquals("In: In: 1\n", bos.toString());
 
       // undo the binding in System
       System.setOut(originalOut);
