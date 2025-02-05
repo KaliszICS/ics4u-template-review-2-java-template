@@ -136,7 +136,9 @@ public class PracticeProblemTest {
       // undo the binding in System
       System.setOut(originalOut);
       System.setIn(originalIn);
-   }@Test
+   }
+   
+   @Test
    public void testQ4_1()
    {
       InputStream originalIn = System.in;
