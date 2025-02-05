@@ -8,7 +8,7 @@ public class PracticeProblemTest {
    public void testQ1_1()
    {
       InputStream originalIn = System.in;
-      String data = "Hello\n";
+      String data = String.format("Hello", System.lineSeparator());
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
       PrintStream originalOut = System.out;
