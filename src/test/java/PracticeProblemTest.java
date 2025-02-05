@@ -56,7 +56,7 @@ public class PracticeProblemTest {
    public void testQ2_1()
    {
       InputStream originalIn = System.in;
-      String data = "9\n5";
+      String data = "9" + System.lineSeparator() + "5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
@@ -71,7 +71,7 @@ public class PracticeProblemTest {
    public void testQ2_2()
    {
       InputStream originalIn = System.in;
-      String data = "9\n3";
+      String data = "9" + System.lineSeparator() + "3";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
 
