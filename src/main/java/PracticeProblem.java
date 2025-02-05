@@ -25,7 +25,7 @@ public class PracticeProblem {
 		System.out.print("In: ");
 		String in = s.nextInt();
 		s.nextLine();
-		System.out.prin("In: );
+		System.out.prin("In: ");
 		int in2 = s.nextInt();
 		s.nextLine();
 		System.out.println(in/in2);
