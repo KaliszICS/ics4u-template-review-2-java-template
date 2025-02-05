@@ -4,26 +4,37 @@ import java.io.*;
 
 public class PracticeProblemTest {
 
+   InputStream originalIn = System.in;
+   PrintStream originalOut = System.out;
+   ByteArrayOutputStream bos = new ByteArrayOutputStream();
+   
+
+   
+   @BeforeEach
+   public void setUp() {
+      System.setOut(new PrintStream(bos));
+   }
+
+   @AfterEach
+   public void tearDown() {
+      System.setOut(originalOut);
+      System.setIn(originalIn);
+   }
+
+   
+   
    @Test
    public void testQ1_1()
    {
       InputStream originalIn = System.in;
       String data = String.format("Hello", System.lineSeparator());
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q1();
 
       // assertion
       assertEquals("In: Hello\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -33,21 +44,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = String.format("Bye", System.lineSeparator());
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q1();
 
       // assertion
-      assertEquals("In: Bye\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
-      
+      assertEquals("In: Bye\n", bos.toString());      
    }
 
    @Test
@@ -56,10 +58,6 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "9\n5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q2();
@@ -67,9 +65,6 @@ public class PracticeProblemTest {
       // assertion
       assertEquals("In: In: 1\n", bos.toString());
 
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -79,9 +74,6 @@ public class PracticeProblemTest {
       String data = "9\n3";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q2();
@@ -89,9 +81,6 @@ public class PracticeProblemTest {
       // assertion
       assertEquals("In: 3\n", bos.toString());
 
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -100,20 +89,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "Hello";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q3();
 
       // assertion
       assertEquals("In: Hello was the text you wrote\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -122,20 +103,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "Bye";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q3();
 
       // assertion
       assertEquals("In: Bye was the text you wrote\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
    
    @Test
@@ -144,20 +117,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q4();
 
       // assertion
       assertEquals("In: 25\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -166,20 +131,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "0";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q4();
 
       // assertion
       assertEquals("In: 0\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -188,20 +145,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "false";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q5();
 
       // assertion
       assertEquals("In: false is a boolean\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -210,20 +159,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "true";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q5();
 
       // assertion
       assertEquals("In: true is a boolean\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
    
    @Test
@@ -232,20 +173,12 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "3.5";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q6();
 
       // assertion
       assertEquals("In: 0.3\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 
    @Test
@@ -254,19 +187,11 @@ public class PracticeProblemTest {
       InputStream originalIn = System.in;
       String data = "9.0";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
-      
-      PrintStream originalOut = System.out;
-      ByteArrayOutputStream bos = new ByteArrayOutputStream();
-      System.setOut(new PrintStream(bos));
 
       // action
       PracticeProblem.q6();
 
       // assertion
       assertEquals("In: 5.8\n", bos.toString());
-
-      // undo the binding in System
-      System.setOut(originalOut);
-      System.setIn(originalIn);
    }
 }
