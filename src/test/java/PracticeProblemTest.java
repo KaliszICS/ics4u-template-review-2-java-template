@@ -30,7 +30,8 @@ public class PracticeProblemTest {
    public void testQ1_2()
    {
       
-      InputStream originalIn = System.in; = "Bye";
+      InputStream originalIn = System.in;
+      String data = "Bye";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
       PrintStream originalOut = System.out;
