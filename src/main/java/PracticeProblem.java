@@ -23,9 +23,9 @@ public class PracticeProblem {
 	public static void q2() {
 		//Write question 2 code here
 		System.out.print("In: ");
-		String in = s.nextInt();
+		int in = s.nextInt();
 		s.nextLine();
-		System.out.prin("In: ");
+		System.out.print("In: ");
 		int in2 = s.nextInt();
 		s.nextLine();
 		System.out.println(in/in2);
