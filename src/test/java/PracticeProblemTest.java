@@ -27,7 +27,7 @@ public class PracticeProblemTest {
    public void testQ1_1()
    {
       InputStream originalIn = System.in;
-      String data = String.format("Hello", System.lineSeparator());
+      String data = "Hello";
       System.setIn(new ByteArrayInputStream(data.getBytes()));
 
       // action
