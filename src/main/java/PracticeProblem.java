@@ -14,6 +14,7 @@ public class PracticeProblem {
 	}
 
 	public static void q1() {
+		s = new Scanner(System.in);
 		//Write question 1 code here
 		System.out.print("In: ");
 		String in = s.nextLine();
@@ -21,6 +22,7 @@ public class PracticeProblem {
 	}
 
 	public static void q2() {
+		s = new Scanner(System.in);
 		//Write question 2 code here
 		System.out.print("In: ");
 		int in = s.nextInt();
@@ -33,6 +35,7 @@ public class PracticeProblem {
 	}
 
 	public static void q3() {
+		s = new Scanner(System.in);
 		//Write question 3 code here
 		System.out.print("In: ");
 		String in = s.nextLine();
@@ -40,6 +43,7 @@ public class PracticeProblem {
 	}
 
 	public static void q4() {
+		s = new Scanner(System.in);
 		//Write question 4 code here
 		System.out.print("In: ");
 		int in = s.nextInt();
@@ -47,6 +51,7 @@ public class PracticeProblem {
 	}
 
 	public static void q5() {
+		s = new Scanner(System.in);
 		//Write question 5 code here
 		System.out.print("In: ");
 		boolean in = s.nextBoolean();
@@ -54,6 +59,7 @@ public class PracticeProblem {
 	}
 
 	public static void q6() {
+		s = new Scanner(System.in);
 		//Write question 6 code here
 		System.out.print("In: ");
 		double in = s.nextDouble();
