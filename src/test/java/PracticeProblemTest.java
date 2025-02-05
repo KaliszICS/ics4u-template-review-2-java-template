@@ -31,7 +31,7 @@ public class PracticeProblemTest {
    {
       
       InputStream originalIn = System.in;
-      String data = "Bye";
+      String data = String.format("Bye", System.lineSeparator());
       System.setIn(new ByteArrayInputStream(data.getBytes()));
       
       PrintStream originalOut = System.out;
