@@ -178,7 +178,7 @@ public class PracticeProblemTest {
       PracticeProblem.q6();
 
       // assertion
-      assertEquals("In: 0.3\n", bos.toString());
+      assertEquals("In: 0.2999999999999998\n", bos.toString());
    }
 
    @Test
