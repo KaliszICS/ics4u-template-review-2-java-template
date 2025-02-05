@@ -55,6 +55,7 @@ public class PracticeProblem {
 		//Write question 5 code here
 		System.out.print("In: ");
 		boolean in = s.nextBoolean();
+		s.nextLine();
 		System.out.println(in + " is a boolean");
 	}
 
@@ -63,6 +64,7 @@ public class PracticeProblem {
 		//Write question 6 code here
 		System.out.print("In: ");
 		double in = s.nextDouble();
+		s.nextLine();
 		System.out.println(in - 3.2);
 	}
 
