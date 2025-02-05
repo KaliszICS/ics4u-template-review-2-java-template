@@ -47,6 +47,7 @@ public class PracticeProblem {
 		//Write question 4 code here
 		System.out.print("In: ");
 		int in = s.nextInt();
+		s.nextLine();
 		System.out.println(in*5);
 	}
 
